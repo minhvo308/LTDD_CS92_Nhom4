@@ -1,0 +1,33 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Nhiệt độ">
+
+        <ListPreference
+            app:title="Đơn vị"
+            app:defaultValue="°C"
+            app:entries="@array/temperature_entries"
+            app:entryValues="@array/temperature_values"
+            app:key="°C"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+    <PreferenceCategory app:title="Ngôn Ngữ">
+        <ListPreference
+            app:defaultValue="Tiếng Việt"
+            app:entries="@array/language_entries"
+            app:entryValues="@array/language_values"
+            app:key="Tiếng Việt"
+            app:title="Ngôn ngữ"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Vị Trí">
+
+        <SwitchPreferenceCompat
+            app:key=""
+            app:title="Sử dụng vị trí hiện tại " />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

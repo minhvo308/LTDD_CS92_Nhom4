@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">Weather Forecast App</string>
+    <string name="app_name" >Weather Forecast App</string>
     <string name="title_home">Home</string>
     <string name="title_search">Search</string>
+    <string name="title_activity_settings">Cài Đặt</string>
+
+    <!-- Preference Titles -->
+    <string name="temperature_header" >Nhiệt Độ</string>
+    <string name="language_header">Ngôn Ngữ</string>
+    <string name="location_header">Vị Trí</string>
+
+    <!-- Temperature Preferences -->
+    <string name="unit_tittle">Đơn Vị</string>
+
+    <!-- Language Preferences -->
+    <string name="location_title">Sử dụng vị trí hiện tại</string>
+    <string name="attachment_summary_on">Cho phép sử dụng vị trí</string>
+    <string name="attachment_summary_off">Không cho phép sử dụng vị trí</string>
 </resources>

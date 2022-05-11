@@ -3,6 +3,22 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/bg_gradient.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/box_detail.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/card_item_detail_hourly.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/item_selector.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/round_corner.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_home.xml" value="0.14666666666666667" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_search.xml" value="0.1796875" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_city.xml" value="0.1796875" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/settings_activity.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/xml/root_preferences.xml" value="0.1796875" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail_weather_hourly.xml" value="0.11302083333333333" />

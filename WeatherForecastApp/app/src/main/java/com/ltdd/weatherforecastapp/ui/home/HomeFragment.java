@@ -1,11 +1,13 @@
 package com.ltdd.weatherforecastapp.ui.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 
 import com.ltdd.weatherforecastapp.R;
+import com.ltdd.weatherforecastapp.SettingsActivity;
 import com.ltdd.weatherforecastapp.api.ApiService;
 import com.ltdd.weatherforecastapp.databinding.FragmentHomeBinding;
 import com.ltdd.weatherforecastapp.model.Current;
@@ -67,6 +70,16 @@ public class HomeFragment extends Fragment {
         lvDetailWeek.setAdapter(weatherDayOfWeekAdapter);
 
         getWeatherDetail();
+
+        ImageButton imgbtsetting = (ImageButton) mView.findViewById(R.id.imgbt_setting);
+        imgbtsetting.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intentLoadNewActivity =  new Intent(HomeFragment.this.getActivity(), SettingsActivity.class);
+                HomeFragment.this.startActivity(intentLoadNewActivity);
+            }
+        });
+
 
         return mView;
     }
