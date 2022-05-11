@@ -3,27 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/drawable-v24/ic_baseline_add_circle_24.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.16666666666666666" />
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/layout/fragment_detail.xml" value="0.1" />
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/layout/fragment_find.xml" value="0.1796875" />
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/layout/fragment_location.xml" value="0.1796875" />
-        <entry key="..\:/AndroidStudioProjects/WeatherForecastApp/app/src/main/res/menu/item_menu.xml" value="0.1796875" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/drawable/box_detail.xml" value="0.1445" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/drawable/sunrise.xml" value="0.1445" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/drawable/sunset.xml" value="0.1445" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.14175724637681159" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/layout/fragment_detail.xml" value="0.1" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/layout/fragment_location.xml" value="0.12360688956433637" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/layout/fragment_search.xml" value="0.12360688956433637" />
-        <entry key="..\:/TaiLieuHoc/di dong/BTL/WeatherForecastApp/app/src/main/res/layout/item_detail.xml" value="0.22826086956521738" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/drawable-v24/ic_baseline_add_circle_24.xml" value="0.125" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/drawable-v24/item_selector.xml" value="0.1" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/drawable-v24/round_corner.xml" value="0.1" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.125" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/layout/fragment_location.xml" value="0.1" />
-        <entry key="..\:/Users/Minh/Desktop/WeatherForecastApp/app/src/main/res/menu/item_menu.xml" value="0.1796875" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/bg_gradient.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/box_detail.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/card_item_detail_hourly.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_format_list_bulleted_24.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_location_on_24.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_cloudy.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/item_selector.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/sunrise.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/sunset.xml" value="0.127" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.12158054711246201" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/fragment_dashboard.xml" value="0.25" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/fragment_home.xml" value="0.16304347826086957" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/fragment_notifications.xml" value="0.25" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/fragment_search.xml" value="0.16304347826086957" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/item_city.xml" value="0.25" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/item_detail.xml" value="0.12158054711246201" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/layout/item_detail_weather_hourly.xml" value="0.12158054711246201" />
+        <entry key="..\:/WeatherForecastApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1925925925925926" />
       </map>
     </option>
   </component>

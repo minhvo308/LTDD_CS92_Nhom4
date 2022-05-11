@@ -1,4 +1,4 @@
-package com.ltdd.weatherforecastapp;
+package com.ltdd.weatherforecastapp.ui.home;
 
 public class DetailWeather {
     private String name;

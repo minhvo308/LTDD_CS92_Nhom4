@@ -1,4 +1,4 @@
-package com.ltdd.weatherforecastapp;
+package com.ltdd.weatherforecastapp.ui.home;
 
 import android.view.View;
 

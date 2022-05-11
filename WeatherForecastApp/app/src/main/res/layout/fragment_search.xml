@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchFragment">
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Fragment tìm kiếm"
-        android:textColor="@color/blue_2"/>
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
 
-</FrameLayout>
+        <AutoCompleteTextView
+            android:id="@+id/actv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select a word"
+            android:completionThreshold="1"
+            android:completionHint="Select a word"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lst_city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <!--    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--        xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="10dp"-->
+    <!--        android:layout_marginEnd="10dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:background="@drawable/box_detail"-->
+    <!--            android:padding="10dp">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/we_ic"-->
+    <!--                android:layout_width="50dp"-->
+    <!--                android:layout_height="50dp"-->
+    <!--                android:layout_alignParentRight="true"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:src="@drawable/ic_cloudy" />-->
+
+    <!--            <LinearLayout-->
+    <!--                android:id="@+id/we_status"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_centerVertical="true"-->
+    <!--                android:layout_toStartOf="@id/we_ic"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/we_city"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Tên vị trí"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="16dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/we_temp"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="Nhiệt dộ"-->
+    <!--                    android:textColor="@color/black"-->
+    <!--                    android:textSize="12dp" />-->
+    <!--            </LinearLayout>-->
+    <!--        </RelativeLayout>-->
+    <!--    </androidx.cardview.widget.CardView>-->
+
+</LinearLayout>

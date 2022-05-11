@@ -1,63 +1,46 @@
 package com.ltdd.weatherforecastapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.viewpager2.widget.ViewPager2;
-
 import android.os.Bundle;
-import android.view.MenuItem;
 import android.view.WindowManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.ltdd.weatherforecastapp.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    BottomNavigationView navigationView;
-    private ViewPager2 mViewPager2;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
 
         //Ẩn thanh action bar
         ActionBar actionBar =getSupportActionBar();
         actionBar.hide();
 
         //Ẩn thanh trạng thái
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
-        navigationView = findViewById(R.id.bottom_navigation);
-        mViewPager2 = findViewById(R.id.view_pager2);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        PagerAdapter pagerAdapter = new PagerAdapter(this);
-        mViewPager2.setAdapter(pagerAdapter);
-
-        getSupportFragmentManager().beginTransaction().replace(R.id.body_container, new HomeFragment()).commit();
-        navigationView.setSelectedItemId(R.id.nav_location);
-
-
-        navigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                Fragment fragment = null;
-                switch (item.getItemId()){
-                    case R.id.nav_location:
-                        fragment = new HomeFragment();
-                        break;
-                    case R.id.nav_detail:
-                        fragment = new DetailFragment();
-                        break;
-                    case R.id.nav_search:
-                        fragment = new SearchFragment();
-                        break;
-                }
-                getSupportFragmentManager().beginTransaction().replace(R.id.body_container, fragment).commit();
-                return true;
-            }
-        });
-        mViewPager2.setPageTransformer(new DepthPageTransformer());
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_search)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(binding.navView, navController);
     }
+
 }
