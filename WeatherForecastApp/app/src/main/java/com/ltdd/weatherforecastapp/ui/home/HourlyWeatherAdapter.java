@@ -14,12 +14,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ltdd.weatherforecastapp.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdapter.WeatherViewHolder> {
     Context context;
-    private ArrayList<WeatherRVModel> weatherRVModelArrayList;
+    private List<WeatherRVModel> weatherRVModelArrayList;
 
-    public HourlyWeatherAdapter(Context context, ArrayList<WeatherRVModel> weatherRVModelArrayList) {
+    public HourlyWeatherAdapter(Context context, List<WeatherRVModel> weatherRVModelArrayList) {
         this.context = context;
         this.weatherRVModelArrayList = weatherRVModelArrayList;
     }
@@ -36,6 +37,10 @@ public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdap
         WeatherRVModel modal = weatherRVModelArrayList.get(position);
         holder.tvTime.setText(modal.getTime());
         holder.tvTemperature.setText(modal.getTemp() + "C");
+
+        int imageId = this.getMipmapResIdByName(modal.getImg());
+
+        holder.imgIconWeather.setImageResource(imageId);
     }
 
     @Override
@@ -52,5 +57,13 @@ public class HourlyWeatherAdapter extends RecyclerView.Adapter<HourlyWeatherAdap
             imgIconWeather = itemView.findViewById(R.id.img_icon_weather);
             tvTemperature = itemView.findViewById(R.id.tv_temperature);
         }
+    }
+
+    // Find Image ID corresponding to the name of the image (in the directory mipmap).
+    public int getMipmapResIdByName(String icon)  {
+        String pkgName = context.getPackageName();
+        // Return 0 if not found.
+        int iconID = context.getResources().getIdentifier(icon , "mipmap", pkgName);
+        return iconID;
     }
 }

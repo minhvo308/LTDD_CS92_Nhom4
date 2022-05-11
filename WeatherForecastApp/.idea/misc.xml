@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail_weather_hourly.xml" value="0.11302083333333333" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail_weekly.xml" value="0.22826086956521738" />
         <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.127" />
         <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/bg_gradient.xml" value="0.127" />
         <entry key="..\:/WeatherForecastApp/app/src/main/res/drawable/box_detail.xml" value="0.127" />
