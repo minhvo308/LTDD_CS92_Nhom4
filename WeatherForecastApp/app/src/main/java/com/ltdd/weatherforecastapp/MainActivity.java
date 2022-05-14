@@ -7,14 +7,18 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
 import com.ltdd.weatherforecastapp.databinding.ActivityMainBinding;
+import com.ltdd.weatherforecastapp.ui.home.HomeFragment;
+import com.ltdd.weatherforecastapp.ui.search.SearchFragment;
+import com.ltdd.weatherforecastapp.ui.search.SearchModel;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private ActivityMainBinding binding;
 
@@ -41,6 +45,20 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+
+//        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        fragmentTransaction.add(R.id.container, new HomeFragment());
+////        fragmentTransaction.add(R.id.navigation_search, new SearchFragment());
+//        fragmentTransaction.commit();
     }
 
+//    public void sendData(String lat, String lon) {
+////        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+//        HomeFragment homeFragment = new HomeFragment();
+//        homeFragment.receiveDataFromSearchFragment(lat, lon);
+////
+////        Bundle bundle = new Bundle();
+////        bundle.putSerializable("object serchmodel", searchModel);
+////        searchFragment.setArguments(bundle);
+//    }
 }

@@ -4,6 +4,10 @@ public class Coord {
     private double lon;
     private double lat;
 
+    public Coord() {
+
+    }
+
     public Coord(double lon, double lat) {
         this.setLon(lon);
         this.setLat(lat);

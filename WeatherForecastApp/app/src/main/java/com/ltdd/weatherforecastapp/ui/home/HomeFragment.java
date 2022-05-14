@@ -2,7 +2,6 @@ package com.ltdd.weatherforecastapp.ui.home;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.ltdd.weatherforecastapp.Common.Common;
 import com.ltdd.weatherforecastapp.R;
 import com.ltdd.weatherforecastapp.SettingsActivity;
 import com.ltdd.weatherforecastapp.api.ApiService;
@@ -23,6 +23,7 @@ import com.ltdd.weatherforecastapp.model.Current;
 import com.ltdd.weatherforecastapp.model.Daily;
 import com.ltdd.weatherforecastapp.model.Hourly;
 import com.ltdd.weatherforecastapp.model.WeatherForecastResponse;
+import com.ltdd.weatherforecastapp.ui.search.SearchFragment;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -40,9 +41,7 @@ public class HomeFragment extends Fragment {
     private ListView lvDetailWeek;
     private GridView rvDetail;
     private TextView nameCity, tempCity, dateCity, description, sunrise, sunset;
-    private String nameCityDefault = "Ho Chi Minh City",
-            lat = "10.762622",
-            lon = "106.660172";
+    private String nameCityDefault = "Ho Chi Minh City";
     DetailAdapter adapter;
     HourlyWeatherAdapter hourlyWeatherAdapter;
     WeatherDayOfWeekAdapter weatherDayOfWeekAdapter;
@@ -71,6 +70,7 @@ public class HomeFragment extends Fragment {
 
         getWeatherDetail();
 
+
         ImageButton imgbtsetting = (ImageButton) mView.findViewById(R.id.imgbt_setting);
         imgbtsetting.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -93,6 +93,11 @@ public class HomeFragment extends Fragment {
         sunset = mView.findViewById(R.id.tv_sunset);
     }
 
+//    public void receiveDataFromSearchFragment(String rLat, String rLon){
+//        lat = rLat;
+//        lon = rLon;
+//    }
+
     private Date setTypeDay(String s){
         long l = Long.parseLong(s);
         Date date = new Date(l*1000L);
@@ -100,7 +105,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void getWeatherDetail() {
-        ApiService.apiservice.getWeatherForecast(lat, lon,
+        ApiService.apiservice.getWeatherForecast(Common.latitude, Common.longitude,
                 "6c496cba030fbaa54828d14c88c1de64", "minutely,alert", "vi",
                 "metric").enqueue(new Callback<WeatherForecastResponse>() {
             @Override
@@ -112,6 +117,8 @@ public class HomeFragment extends Fragment {
                     SimpleDateFormat getHourFormat = new SimpleDateFormat("HH:mm");
                     SimpleDateFormat simpleDateFormat1 = new SimpleDateFormat("EEEE");
 
+//                    //Lấy thành phố hiện tại
+//                    String city = weatherResponse.
                     //Nhiệt độ hiện tại
                     String temp = Math.round(weatherResponse.getCurrent().getTemp()) + "°C";
                     //Ngày hôm nay
@@ -127,7 +134,7 @@ public class HomeFragment extends Fragment {
                     String set = getHourFormat.format(setTypeDay(sunsetRaw));
 
                     tempCity.setText(temp);
-                    nameCity.setText(nameCityDefault);
+                    nameCity.setText(Common.nameCity);
                     dateCity.setText(date);
                     description.setText("Có " + des);
                     sunrise.setText(rise + " AM");
@@ -148,7 +155,6 @@ public class HomeFragment extends Fragment {
                         //icon
                         String icon = hour.get(i).getWeather().get(0).getIcon();
                         String ic = "_" + icon;
-                        Log.e(hourly, ic);
 
                         weatherList.add(new WeatherRVModel(hourly, ic, t));
                     }

@@ -19,10 +19,16 @@
         <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/settings_activity.xml" value="0.1" />
         <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
         <entry key="..\:/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/xml/root_preferences.xml" value="0.1796875" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/drawable/box_detail.xml" value="0.1" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/activity_main.xml" value="0.12360688956433637" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_home.xml" value="0.22826086956521738" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_search.xml" value="0.2" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail.xml" value="0.17760416666666667" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail_weather_hourly.xml" value="0.11302083333333333" />
         <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail_weekly.xml" value="0.22826086956521738" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_list_city.xml" value="0.264" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/settings_activity.xml" value="0.11302083333333333" />
+        <entry key="..\:/TaiLieuHoc/di dong/BTL/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/menu/bottom_nav_menu.xml" value="0.14895833333333333" />
         <entry key="..\:/Users/tannn/Desktop/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/fragment_search.xml" value="0.13450292397660818" />
         <entry key="..\:/Users/tannn/Desktop/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_city.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/tannn/Desktop/LTDD_CS92_Nhom4/WeatherForecastApp/app/src/main/res/layout/item_detail.xml" value="0.36666666666666664" />

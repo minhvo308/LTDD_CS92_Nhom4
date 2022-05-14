@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="20dp"
-    tools:context=".MainActivity">
+    tools:context=".ui.search.SearchFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -38,142 +38,226 @@
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:orientation="vertical"
-        android:padding="10dp"
         android:weightSum="3"
         tools:context=".MainActivity">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="202dp">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_cityname"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:text="Tên thành phố: " />
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tv_countryname"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tên thành phố: " />
+
+                <TextView
+                    android:id="@+id/tv_cityname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:text="HCM" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/tv_cityname"
-                android:layout_marginLeft="10dp"
-                android:text="Tên quốc gia: " />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tên quốc gia: " />
+
+                <TextView
+                    android:id="@+id/tv_countryname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Tên"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
 
 
             <LinearLayout
-                android:id="@+id/ll_temp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/tv_countryname"
                 android:orientation="horizontal">
 
-
                 <TextView
-                    android:id="@+id/tv_temp"
-                    android:layout_width="305dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
                     android:layout_marginLeft="10dp"
                     android:text="Nhiệt độ"
-                    android:textSize="30dp" />
+                    android:textSize="30sp" />
+
+                <TextView
+                    android:id="@+id/tv_temp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="30"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
 
                 <ImageView
                     android:id="@+id/ic_temp"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_toEndOf="@id/tv_temp"
+                    android:layout_marginLeft="60dp"
                     android:src="@drawable/ic_cloudy" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_trangthai"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/ll_temp"
-                android:layout_marginLeft="10dp"
-                android:text="Trạng thái: " />
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Trạng thái: " />
+
+                <TextView
+                    android:id="@+id/tv_trangthai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Trạng thái "
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/btn_move"
-                android:layout_width="391dp"
+                android:id="@+id/btn_add"
+                android:layout_width="match_parent"
                 android:layout_height="61dp"
-                android:layout_below="@id/tv_trangthai"
-                android:layout_marginLeft="10dp"
-                android:text="Xem chi tiết" />
-        </RelativeLayout>
+                android:layout_marginTop="5dp"
+                android:text="Thêm thành phố" />
+        </LinearLayout>
 
-        <LinearLayout
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:rotation="180"
+            android:background="#B2FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_t"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
-            android:orientation="vertical">
+            android:text="Quản lý thành phố"
+            android:textSize="25dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Quản lý thành phố"
-                android:textSize="25dp" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="10dp"
-                app:cardCornerRadius="6dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/box_detail"
-                    android:padding="10dp">
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
-                    <ImageView
-                        android:id="@+id/we_ic"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:layout_alignParentRight="true"
-                        android:layout_centerVertical="true"
-                        android:src="@drawable/ic_cloudy" />
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent">-->
+<!--            <ScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
-                    <LinearLayout
-                        android:id="@+id/we_status"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_toStartOf="@id/we_ic"
-                        android:orientation="vertical">
+                <ListView
+                    android:id="@+id/lv_city_favourite"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+<!--            </ScrollView>-->
 
-                        <TextView
-                            android:id="@+id/we_city"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Tên vị trí"
-                            android:textColor="@color/black"
-                            android:textSize="16dp" />
+            <!--                </LinearLayout>-->
 
-                        <TextView
-                            android:id="@+id/we_temp"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Nhiệt dộ"
-                            android:textColor="@color/black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
-                </RelativeLayout>
-            </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/btn_save"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Thêm thành phố " />
 
-        </LinearLayout>
+    <!--            <androidx.cardview.widget.CardView-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_marginTop="10dp"-->
+    <!--                android:layout_marginEnd="10dp"-->
+    <!--                app:cardCornerRadius="6dp">-->
+
+    <!--                <RelativeLayout-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:background="@drawable/box_detail"-->
+    <!--                    android:padding="10dp">-->
+
+    <!--                    <ImageView-->
+    <!--                        android:id="@+id/we_ic"-->
+    <!--                        android:layout_width="50dp"-->
+    <!--                        android:layout_height="50dp"-->
+    <!--                        android:layout_alignParentRight="true"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:src="@drawable/ic_cloudy" />-->
+
+    <!--                    <LinearLayout-->
+    <!--                        android:id="@+id/we_status"-->
+    <!--                        android:layout_width="match_parent"-->
+    <!--                        android:layout_height="wrap_content"-->
+    <!--                        android:layout_centerVertical="true"-->
+    <!--                        android:layout_toStartOf="@id/we_ic"-->
+    <!--                        android:orientation="vertical">-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/we_city"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Tên vị trí"-->
+    <!--                            android:textColor="@color/black"-->
+    <!--                            android:textSize="16dp" />-->
+
+    <!--                        <TextView-->
+    <!--                            android:id="@+id/we_temp"-->
+    <!--                            android:layout_width="match_parent"-->
+    <!--                            android:layout_height="wrap_content"-->
+    <!--                            android:text="Nhiệt dộ"-->
+    <!--                            android:textColor="@color/black"-->
+    <!--                            android:textSize="12dp" />-->
+    <!--                    </LinearLayout>-->
+    <!--                </RelativeLayout>-->
+    <!--            </androidx.cardview.widget.CardView>-->
+
+    <!--            <Button-->
+    <!--                android:id="@+id/btn_save"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Thêm thành phố " />-->
+<!--            </ScrollView>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
     </LinearLayout>
 
     <!--    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->

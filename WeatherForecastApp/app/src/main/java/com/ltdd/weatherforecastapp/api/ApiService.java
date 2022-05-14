@@ -3,6 +3,7 @@ package com.ltdd.weatherforecastapp.api;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.ltdd.weatherforecastapp.model.WeatherForecastResponse;
+import com.ltdd.weatherforecastapp.model.WeatherResponse;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -24,4 +25,11 @@ public interface ApiService {
                                                      @Query("exclude") String exclude,
                                                      @Query("lang") String lang,
                                                      @Query("units") String unit);
+
+    @GET("data/2.5/weather")
+    Call<WeatherResponse> getWeatherByName(@Query("q") String q,
+                                           @Query("appid") String appId,
+                                           @Query("exclude") String exclude,
+                                           @Query("lang") String lang,
+                                           @Query("units") String unit);
 }
