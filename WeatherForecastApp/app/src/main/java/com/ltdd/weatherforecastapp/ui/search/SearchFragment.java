@@ -28,6 +28,7 @@ import com.ltdd.weatherforecastapp.MainActivity;
 import com.ltdd.weatherforecastapp.R;
 import com.ltdd.weatherforecastapp.api.ApiService;
 import com.ltdd.weatherforecastapp.database.DBHelper;
+
 import com.ltdd.weatherforecastapp.databinding.FragmentSearchBinding;
 import com.ltdd.weatherforecastapp.model.Coord;
 import com.ltdd.weatherforecastapp.model.WeatherResponse;

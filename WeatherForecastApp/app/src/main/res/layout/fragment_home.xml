@@ -198,7 +198,7 @@
                 <GridView
                     android:id="@+id/rv_detail1"
                     android:layout_width="match_parent"
-                    android:layout_height="545dp"
+                    android:layout_height="525dp"
                     android:numColumns="2"
                     android:stretchMode="columnWidth"
                     android:layout_marginStart="20dp"
@@ -215,7 +215,8 @@
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     android:layout_margin="5dp"
-                    android:layout_marginTop="20dp"/>
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"/>
 
                 <ListView
                     android:id="@+id/lv_detail_weekly"
