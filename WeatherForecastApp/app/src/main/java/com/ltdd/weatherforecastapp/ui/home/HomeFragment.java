@@ -1,7 +1,11 @@
 package com.ltdd.weatherforecastapp.ui.home;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,11 +13,20 @@ import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 
+import com.google.android.gms.location.FusedLocationProviderClient;
+import com.google.android.gms.location.LocationCallback;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationResult;
+import com.google.android.gms.location.LocationServices;
 import com.ltdd.weatherforecastapp.Common.Common;
 import com.ltdd.weatherforecastapp.R;
 import com.ltdd.weatherforecastapp.SettingsActivity;
@@ -34,7 +47,8 @@ import retrofit2.Call;
 import retrofit2.Callback;
 
 public class HomeFragment extends Fragment {
-
+    private int REQUEST_CODE_LOCATION_PERMISSION = 1;
+    private FusedLocationProviderClient fusedLocationProviderClient;
     private FragmentHomeBinding binding;
     private View mView;
     private RecyclerView rvWeather;
@@ -80,8 +94,67 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this.getActivity());
+        ImageButton imgbtlocation = (ImageButton) mView.findViewById(R.id.current_location);
+        imgbtlocation.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View view) {
+
+                if(ContextCompat.checkSelfPermission(getActivity().getApplicationContext(),
+                        Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(getActivity(),
+                            new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                            REQUEST_CODE_LOCATION_PERMISSION);
+                }else {
+                    getCurrentLocation();
+                }
+            }
+        });
 
         return mView;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == REQUEST_CODE_LOCATION_PERMISSION & grantResults.length>0){
+            getCurrentLocation();
+        }else {
+            Toast.makeText(this.getActivity(), "Permission Denied!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void  getCurrentLocation(){
+        LocationRequest locationRequest = new LocationRequest();
+        locationRequest.setInterval(10000);
+        locationRequest.setFastestInterval(3000);
+        locationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+        if (ActivityCompat.checkSelfPermission(this.getActivity(),
+                Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED &&
+                ActivityCompat.checkSelfPermission(this.getActivity(),
+                        Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            return;
+        }
+        LocationServices.getFusedLocationProviderClient(HomeFragment.this.getActivity())
+                .requestLocationUpdates(locationRequest, new LocationCallback() {
+                    @Override
+                    public void onLocationResult(@NonNull LocationResult locationResult) {
+                        super.onLocationResult(locationResult);
+                        LocationServices.getFusedLocationProviderClient(HomeFragment.this.getActivity())
+                                .removeLocationUpdates(this);
+                        if (locationResult != null && locationResult.getLocations().size() > 0) {
+                            int latestLocationIndex = locationResult.getLocations().size() - 1;
+                            double latitude =
+                                    locationResult.getLocations().get(latestLocationIndex).getLatitude();
+                            double longitude = locationResult.getLocations().get(latestLocationIndex).getLongitude();
+                            Common.latitude = String.valueOf(latitude);
+                            Common.longitude = String.valueOf(longitude);
+                            Common.nameCity = String.valueOf(nameCity.getText());
+                            getWeatherDetail();
+                        }
+                    }
+                }, Looper.getMainLooper());
     }
 
     private void anhXa() {
@@ -137,8 +210,8 @@ public class HomeFragment extends Fragment {
                     nameCity.setText(Common.nameCity);
                     dateCity.setText(date);
                     description.setText("Có " + des);
-                    sunrise.setText(rise + " AM");
-                    sunset.setText(set + " PM");
+                    sunrise.setText(rise);
+                    sunset.setText(set);
 
                     //thời tiết theo giờ
                     List<Hourly> hour = weatherResponse.getHourly();
