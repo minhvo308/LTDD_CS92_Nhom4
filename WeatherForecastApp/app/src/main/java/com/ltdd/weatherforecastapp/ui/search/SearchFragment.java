@@ -156,11 +156,15 @@ public class SearchFragment extends Fragment {
         addCity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (db.saveCitydata(c, lon, lat)) {
-                    showListCity();
-                    Toast.makeText(SearchFragment.this.getActivity(), "Thành công", Toast.LENGTH_SHORT).show();
+                if (city.getText().equals("") || temperature.getText().equals("")){
+                    Toast.makeText(SearchFragment.this.getActivity(), "Thành phố không tồn tại", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(SearchFragment.this.getActivity(), "Thành phố này bận đã thêm rồi", Toast.LENGTH_SHORT).show();
+                    if (db.saveCitydata(c, lon, lat)) {
+                        showListCity();
+                        Toast.makeText(SearchFragment.this.getActivity(), "Thành công", Toast.LENGTH_SHORT).show();
+                    } else {
+                        Toast.makeText(SearchFragment.this.getActivity(), "Thành phố này bạn đã thêm rồi", Toast.LENGTH_SHORT).show();
+                    }
                 }
             }
 

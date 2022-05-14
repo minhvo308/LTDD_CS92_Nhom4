@@ -36,7 +36,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Tên vị trí "
-                    android:textColor="@color/black"
+                    android:textColor="@color/white"
                     android:textSize="16dp" />
 
                 <TextView
@@ -44,8 +44,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="(Tên vị trí)"
-                    android:textColor="@color/black"
-                    android:textSize="13dp" />
+                    android:textSize="13dp"
+                    android:textColor="@color/white"/>
 
             </LinearLayout>
 
@@ -56,7 +56,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Nhiệt dộ"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="12dp" />
 
 

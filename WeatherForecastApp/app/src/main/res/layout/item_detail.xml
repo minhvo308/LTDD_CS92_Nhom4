@@ -7,7 +7,7 @@
     android:backgroundTint="#0046ADF1"
     android:layout_marginTop="20dp"
     android:layout_marginEnd="20dp"
-    android:padding="5dp">
+    android:padding="2dp">
 
     <LinearLayout
         android:layout_width="match_parent"

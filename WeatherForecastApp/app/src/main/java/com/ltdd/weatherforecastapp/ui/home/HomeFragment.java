@@ -151,7 +151,7 @@ public class HomeFragment extends Fragment {
                         //giờ
                         String hourly = getHourFormat.format(hour1);
                         //nhiệt độ
-                        String t = Math.round(hour.get(i).getTemp()) + "°C";
+                        String t = Math.round(hour.get(i).getTemp()) + "°";
                         //icon
                         String icon = hour.get(i).getWeather().get(0).getIcon();
                         String ic = "_" + icon;
